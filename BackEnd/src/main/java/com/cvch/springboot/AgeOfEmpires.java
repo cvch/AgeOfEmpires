@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
-public class SpringbootApplication {
+public class AgeOfEmpires {
 
 	@Bean
 	RestTemplate restTemplate() {
@@ -14,7 +14,7 @@ public class SpringbootApplication {
 	}
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringbootApplication.class, args);
+		SpringApplication.run(AgeOfEmpires.class, args);
 	}
 
 }

@@ -1,0 +1,40 @@
+<div class="row">
+    <div class="col-6">
+        <div class="hex-row">
+            <div class="hex" *ngFor="let item of civilizations.slice(0,6)" (click)="selectCivilization(item)"
+                [ngClass]="{'hex-selected': item.id == civilizationSelect.id}">
+                <div class="top"></div>
+                <div class="middle">{{item.name}}</div>
+                <div class="bottom"></div>
+            </div>
+        </div>
+        <div class="even hex-row">
+            <div class="hex" *ngFor="let item of civilizations.slice(7,12)" (click)="selectCivilization(item)"
+                [ngClass]="{'hex-selected': item.id == civilizationSelect.id}">
+                <div class="top"></div>
+                <div class="middle">{{item.name}}</div>
+                <div class="bottom"></div>
+            </div>
+        </div>
+        <div class="hex-row">
+            <div class="hex" *ngFor="let item of civilizations.slice(13,18)" (click)="selectCivilization(item)"
+                [ngClass]="{'hex-selected': item.id == civilizationSelect.id}">
+                <div class="top"></div>
+                <div class="middle">{{item.name}}</div>
+                <div class="bottom"></div>
+            </div>
+        </div>
+        <br>
+        <div class="text-center">
+            <span>{{civilizationSelect.name}}</span>
+            <br>
+            <span>{{civilizationSelect.expansion}}</span>
+            <br>
+            <span>{{civilizationSelect.army_type}}</span>
+        </div>
+    </div>
+    <div class="col-4">
+        <img src="{{'assets/img/civilizations/'+civilizationSelect.name+'.png'}}">
+    </div>
+
+</div>
