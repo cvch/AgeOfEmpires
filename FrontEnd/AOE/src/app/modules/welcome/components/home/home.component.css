@@ -1,0 +1,42 @@
+.header-welcome {
+    background-image: url('/assets/img/p-micro.png');
+    min-height: 210px;
+    width: 470px;
+    background-repeat: no-repeat;
+    margin: -100px auto auto;
+}
+
+.text-author {
+    color: #b68d53;
+    bottom: 50px;
+    left: 0;
+    right: 0;
+    font-size: 30px;
+    text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+    font-family: times;
+}
+
+.video-blur {
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: blur(8px);
+}
+
+#container {
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+}
+
+#videobcg {
+    width: inherit;
+    height: inherit;
+    -o-filter: blur(15px);
+    filter: blur(15px);
+    object-fit: cover;
+    transform: scale(1.04);
+}
