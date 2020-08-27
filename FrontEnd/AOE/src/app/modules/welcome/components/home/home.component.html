@@ -1,0 +1,30 @@
+<div class="text-center">
+    <div id="headerLogo" class="header-welcome"></div>
+    <div id="video" class="position-relative">
+        <iframe class="position-absolute video-blur" width="560" height="315"
+            src="https://www.youtube.com/embed/QFlVNtGJVDU?autoplay=1&loop=1&mute=1" frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div id="autor">
+            <img src="/assets/img/aoe-logo.png">
+            <br>
+            <span class="text-author font-weight-bold position-absolute">CAMILO VELASCO CHAVES</span>
+        </div>
+    </div>
+    <div id="componets" class="position-relative">
+        <br>
+        <div class="background-apps">
+            <div class="ribbon-left"></div>
+            <div class="ribbon-rigth"></div>
+            <app-civilization></app-civilization>
+            <app-unit></app-unit>
+            <app-structure></app-structure>
+            <app-technology></app-technology>
+        </div>
+    </div>
+    <div class="position-fixed z-index-sup bottom-0 right-0">
+        <button class="btn btn-primary" (click)="showModal = !showModal">Ayuda</button>
+        <div *ngIf="showModal">
+            <app-form></app-form>
+        </div>
+    </div>
+</div>

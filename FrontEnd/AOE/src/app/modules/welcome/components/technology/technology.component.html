@@ -1,0 +1,46 @@
+<br>
+<h1 class="text-center font-weight-bold text-info">Thecnologies</h1>
+<div class="row container-fluid">
+    <div class="col-5 frame-image">
+        <img src="{{'assets/img/thecnologies/'+technologySelected.name+'.png'}}">
+    </div>
+    <div class="col-7 ">
+        <div class="d-flex">
+            <div class="ml-auto">
+                <div class="hex-row">
+                    <div class="hex" *ngFor="let item of technologies.slice(0,6)" (click)="selectTechnology(item)"
+                        [ngClass]="{'hex-selected': item.id == technologySelected.id}">
+                        <div class="top"></div>
+                        <div class="middle">{{item.name}}</div>
+                        <div class="bottom"></div>
+                    </div>
+                </div>
+                <div class="even hex-row">
+                    <div class="hex" *ngFor="let item of technologies.slice(7,12)" (click)="selectTechnology(item)"
+                        [ngClass]="{'hex-selected': item.id == technologySelected.id}">
+                        <div class="top"></div>
+                        <div class="middle">{{item.name}}</div>
+                        <div class="bottom"></div>
+                    </div>
+                </div>
+                <div class="hex-row">
+                    <div class="hex" *ngFor="let item of technologies.slice(13,18)" (click)="selectTechnology(item)"
+                        [ngClass]="{'hex-selected': item.id == technologySelected.id}">
+                        <div class="top"></div>
+                        <div class="middle">{{item.name}}</div>
+                        <div class="bottom"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="text-left">
+            <h4>{{technologySelected.name}}</h4>
+            <br>
+            <span class="font-weight-bold">{{technologySelected.description}}</span>
+            <br>
+            <span>{{technologySelected.expansion}}</span>
+        </div>
+    </div>
+</div>
+<br>

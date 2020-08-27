@@ -1,0 +1,46 @@
+<br>
+<h1 class="text-center text-success font-weight-bold">Units</h1>
+<div class="row container-fluid">
+    <div class="col-5 frame-image">
+        <img src="{{'assets/img/units/'+unitSelected.name+'.png'}}">
+    </div>
+    <div class="col-7 ">
+        <div class="d-flex">
+            <div class="ml-auto">
+                <div class="hex-row">
+                    <div class="hex" *ngFor="let item of units.slice(0,6)" (click)="selectUnit(item)"
+                        [ngClass]="{'hex-selected': item.id == unitSelected.id}">
+                        <div class="top"></div>
+                        <div class="middle">{{item.name}}</div>
+                        <div class="bottom"></div>
+                    </div>
+                </div>
+                <div class="even hex-row">
+                    <div class="hex" *ngFor="let item of units.slice(7,12)" (click)="selectUnit(item)"
+                        [ngClass]="{'hex-selected': item.id == unitSelected.id}">
+                        <div class="top"></div>
+                        <div class="middle">{{item.name}}</div>
+                        <div class="bottom"></div>
+                    </div>
+                </div>
+                <div class="hex-row">
+                    <div class="hex" *ngFor="let item of units.slice(13,18)" (click)="selectUnit(item)"
+                        [ngClass]="{'hex-selected': item.id == unitSelected.id}">
+                        <div class="top"></div>
+                        <div class="middle">{{item.name}}</div>
+                        <div class="bottom"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="text-left">
+            <h4>{{unitSelected.name}}</h4>
+            <br>
+            <span class="font-weight-bold">{{unitSelected.description}}</span>
+            <br>
+            <span>{{unitSelected.expansion}}</span>
+        </div>
+    </div>
+</div>
+<br>
