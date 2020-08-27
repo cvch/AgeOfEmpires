@@ -1,3 +1,7 @@
+body {
+    background-color: #3b4044;
+}
+
 .header-welcome {
     background-image: url('/assets/img/p-micro.png');
     min-height: 210px;
@@ -39,4 +43,26 @@
     filter: blur(15px);
     object-fit: cover;
     transform: scale(1.04);
+}
+
+.background-apps {
+    background-color: antiquewhite;
+}
+
+.ribbon-left {
+    position: absolute;
+    background-color: #f96767;
+    z-index: 0;
+    height: 1764px;
+    width: 5%;
+    left: 30px;
+}
+
+.ribbon-rigth{
+    position: absolute;
+    background-color: #f96767;
+    z-index: 0;
+    height: 1764px;
+    width: 5%;
+    right: 30px;
 }

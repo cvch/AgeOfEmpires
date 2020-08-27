@@ -4,9 +4,14 @@
     margin-bottom: -26px;
 }
 
+.hex:over {
+    filter: blur(1px);
+    cursor: pointer;
+}
+
 .hex .top {
     width: 0;
-    border-bottom: 30px solid #6C6;
+    border-bottom: 30px solid #b68d53;
     border-left: 52px solid transparent;
     border-right: 52px solid transparent;
 }
@@ -14,12 +19,12 @@
 .hex .middle {
     width: 104px;
     height: 60px;
-    background: #6C6;
+    background: #b68d53;
 }
 
 .hex .bottom {
     width: 0;
-    border-top: 30px solid #6C6;
+    border-top: 30px solid #b68d53;
     border-left: 52px solid transparent;
     border-right: 52px solid transparent;
 }
@@ -33,5 +38,6 @@
 }
 
 .hex-selected {
-    background-color: red;
+    filter: invert(1);
 }
+

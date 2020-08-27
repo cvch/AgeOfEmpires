@@ -1,5 +1,7 @@
-<div class="row">
-    <div class="col-6">
+<br>
+<h1 class="text-center font-weight-bold text-warning">Civilizations</h1>
+<div class="row container-fluid">
+    <div class="col-7">
         <div class="hex-row">
             <div class="hex" *ngFor="let item of civilizations.slice(0,6)" (click)="selectCivilization(item)"
                 [ngClass]="{'hex-selected': item.id == civilizationSelect.id}">
@@ -26,15 +28,15 @@
         </div>
         <br>
         <div class="text-center">
-            <span>{{civilizationSelect.name}}</span>
+            <h4>{{civilizationSelect.name}}</h4>
             <br>
-            <span>{{civilizationSelect.expansion}}</span>
+            <span class="font-weight-bold">{{civilizationSelect.expansion}}</span>
             <br>
             <span>{{civilizationSelect.army_type}}</span>
         </div>
     </div>
-    <div class="col-4">
+    <div class="col-5 frame-image">
         <img src="{{'assets/img/civilizations/'+civilizationSelect.name+'.png'}}">
     </div>
-
 </div>
+<br>

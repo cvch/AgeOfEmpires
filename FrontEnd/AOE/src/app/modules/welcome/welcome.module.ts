@@ -8,10 +8,11 @@ import { UnitComponent } from './components/unit/unit.component';
 import { StructureComponent } from './components/structure/structure.component';
 import { TechnologyComponent } from './components/technology/technology.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormComponent } from './components/form/form.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, CivilizationComponent, UnitComponent, StructureComponent, TechnologyComponent],
+  declarations: [HomeComponent, CivilizationComponent, UnitComponent, StructureComponent, TechnologyComponent, FormComponent],
   imports: [
     CommonModule,
     WelcomeRoutingModule,

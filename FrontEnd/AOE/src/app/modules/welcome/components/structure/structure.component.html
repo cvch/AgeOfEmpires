@@ -1,1 +1,42 @@
-<p>structure works!</p>
+<br>
+<h1 class="text-center text-danger font-weight-bold">Structures</h1>
+<div class="row container-fluid">
+    <div class="col-7">
+        <div class="hex-row">
+            <div class="hex" *ngFor="let item of structures.slice(0,6)" (click)="selectStructure(item)"
+                [ngClass]="{'hex-selected': item.id == structureSelected.id}">
+                <div class="top"></div>
+                <div class="middle">{{item.name}}</div>
+                <div class="bottom"></div>
+            </div>
+        </div>
+        <div class="even hex-row">
+            <div class="hex" *ngFor="let item of structures.slice(7,12)" (click)="selectStructure(item)"
+                [ngClass]="{'hex-selected': item.id == structureSelected.id}">
+                <div class="top"></div>
+                <div class="middle">{{item.name}}</div>
+                <div class="bottom"></div>
+            </div>
+        </div>
+        <div class="hex-row">
+            <div class="hex" *ngFor="let item of structures.slice(13,18)" (click)="selectStructure(item)"
+                [ngClass]="{'hex-selected': item.id == structureSelected.id}">
+                <div class="top"></div>
+                <div class="middle">{{item.name}}</div>
+                <div class="bottom"></div>
+            </div>
+        </div>
+        <br>
+        <div class="text-center">
+            <h4>{{structureSelected.name}}</h4>
+            <br>
+            <span class="font-weight-bold">{{structureSelected.expansion}}</span>
+            <br>
+            <span>{{structureSelected.age}}</span>
+        </div>
+    </div>
+    <div class="col-5 frame-image">
+        <img src="{{'assets/img/structures/'+structureSelected.name+'.png'}}">
+    </div>
+</div>
+<br>

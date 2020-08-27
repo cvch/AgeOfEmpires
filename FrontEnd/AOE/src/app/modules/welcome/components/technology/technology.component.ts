@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GeneralService } from '../../../../shared/service/general.service';
 
 @Component({
   selector: 'app-technology',
@@ -7,9 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TechnologyComponent implements OnInit {
 
-  constructor() { }
+  technologies:any;
+  technologySelected:any;
+
+  constructor(private generalService: GeneralService) { }
 
   ngOnInit(): void {
+    this.technologies = [];
+    this.technologySelected = {};
+    this.getTechnologies();
   }
 
+  public getTechnologies() {
+    this.generalService.get('technologies').subscribe(result => {
+      this.technologies = result.technologies;
+      this.technologySelected = this.technologies[0];
+    })
+  }
+
+  public selectTechnology(technologySelected:any){
+    this.technologySelected = technologySelected;
+  }
 }
