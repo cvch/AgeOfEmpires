@@ -58,11 +58,23 @@ body {
     left: 30px;
 }
 
-.ribbon-rigth{
+.ribbon-rigth {
     position: absolute;
     background-color: #f96767;
     z-index: 0;
     height: 1764px;
     width: 5%;
     right: 30px;
+}
+
+.z-index-sup {
+    z-index:3;
+}
+
+.bottom-0{
+    bottom: 0;
+}
+
+.rigth-0 {
+    right: 0;
 }

@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
+  showModal:boolean;
   constructor() { }
 
   ngOnInit(): void {
+    this.showModal = false;
   }
 
 }

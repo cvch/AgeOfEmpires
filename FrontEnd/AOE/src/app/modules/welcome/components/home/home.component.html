@@ -21,7 +21,10 @@
             <app-technology></app-technology>
         </div>
     </div>
-    <div>
-        <button></button>
+    <div class="position-fixed z-index-sup bottom-0 right-0">
+        <button class="btn btn-primary" (click)="showModal = !showModal">Ayuda</button>
+        <div *ngIf="showModal">
+            <app-form></app-form>
+        </div>
     </div>
 </div>
